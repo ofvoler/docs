@@ -1,0 +1,2147 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Java styleguide - Project Books Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java-style-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Project Books Docs" class="md-header__button md-logo" aria-label="Project Books Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Project Books Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Java styleguide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Project-Books/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Project Books Docs" class="md-nav__button md-logo" aria-label="Project Books Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Project Books Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Project-Books/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-of-conduct/" class="md-nav__link">
+        Code of conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Styleguides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Styleguides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Styleguides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java styleguide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Java styleguide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ide-formatting" class="md-nav__link">
+    IDE formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="IDE formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intellij" class="md-nav__link">
+    IntelliJ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eclipse" class="md-nav__link">
+    Eclipse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-violations" class="md-nav__link">
+    Checking for violations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-files" class="md-nav__link">
+    Source files
+  </a>
+  
+    <nav class="md-nav" aria-label="Source files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-american-english" class="md-nav__link">
+    Use American English
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-file-structure" class="md-nav__link">
+    Source file structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Source file structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-wildcard-imports" class="md-nav__link">
+    No wildcard imports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-line-wrapping-for-package-and-import-statements" class="md-nav__link">
+    No line-wrapping for package and import statements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-at-the-top" class="md-nav__link">
+    Fields at the top
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overloads-together" class="md-nav__link">
+    Overloads together
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newline-at-end-of-file" class="md-nav__link">
+    Newline at end of file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#braces" class="md-nav__link">
+    Braces
+  </a>
+  
+    <nav class="md-nav" aria-label="Braces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-true-brace-style-1tbs" class="md-nav__link">
+    One true brace style (1TBS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#100-character-column-limit" class="md-nav__link">
+    100 character column limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-statement-per-line" class="md-nav__link">
+    One statement per line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-blocks-can-be-concise" class="md-nav__link">
+    Empty blocks can be concise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whitespace" class="md-nav__link">
+    Whitespace
+  </a>
+  
+    <nav class="md-nav" aria-label="Whitespace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vertical-whitespace" class="md-nav__link">
+    Vertical whitespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-horizontal-alignment" class="md-nav__link">
+    No horizontal alignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-grouping-parentheses-recommended" class="md-nav__link">
+    Optional grouping parentheses: recommended
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-classes" class="md-nav__link">
+    Enum classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Enum classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comment-fall-through" class="md-nav__link">
+    Comment fall-through
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-all-cases-or-have-a-default-case" class="md-nav__link">
+    Enumerate all cases or have a default case
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+    <nav class="md-nav" aria-label="Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-you-need-the-comment" class="md-nav__link">
+    Do you need the comment?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeric-literals" class="md-nav__link">
+    Numeric literals
+  </a>
+  
+    <nav class="md-nav" aria-label="Numeric literals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#underscores-in-numeric-literals" class="md-nav__link">
+    Underscores in numeric literals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-suffixes" class="md-nav__link">
+    Long suffixes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-declarations" class="md-nav__link">
+    Variable declarations
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable declarations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-variable-declaration-per-line" class="md-nav__link">
+    One variable declaration per line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declare-as-close-as-possible-to-use" class="md-nav__link">
+    Declare as close as possible to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-c-style-array-declarations" class="md-nav__link">
+    No C-style array declarations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    Indentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Indentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-spaces-no-tabs" class="md-nav__link">
+    4 Spaces, no tabs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aligning-method-calls" class="md-nav__link">
+    Aligning method calls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming" class="md-nav__link">
+    Naming
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-names" class="md-nav__link">
+    Package names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-names" class="md-nav__link">
+    Class names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-names" class="md-nav__link">
+    Method names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constant-names" class="md-nav__link">
+    Constant names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-constant-field-names" class="md-nav__link">
+    Non-constant field names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-names" class="md-nav__link">
+    Parameter names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-variables-names" class="md-nav__link">
+    Local variables names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-variables-names" class="md-nav__link">
+    Type variables names
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javadoc" class="md-nav__link">
+    Javadoc
+  </a>
+  
+    <nav class="md-nav" aria-label="Javadoc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-author-tag" class="md-nav__link">
+    No @author tag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-practices" class="md-nav__link">
+    Programming practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotations_1" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-override" class="md-nav__link">
+    Use @Override
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-visiblefortesting" class="md-nav__link">
+    Use @VisibleForTesting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-swallow-exceptions" class="md-nav__link">
+    Don't swallow exceptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringbuilder-over-stringbuffer" class="md-nav__link">
+    StringBuilder over StringBuffer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-hashcode-and-equals" class="md-nav__link">
+    Overriding hashCode() and equals()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-tostring" class="md-nav__link">
+    Overriding toString()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-methods" class="md-nav__link">
+    Short methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todos" class="md-nav__link">
+    TODOs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefer-optional-over-null" class="md-nav__link">
+    Prefer Optional over null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favor-enummap-over-hashmap" class="md-nav__link">
+    Favor EnumMap over HashMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#junit-tests" class="md-nav__link">
+    JUnit tests
+  </a>
+  
+    <nav class="md-nav" aria-label="JUnit tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-assertj" class="md-nav__link">
+    Use AssertJ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#givenwhenthen-pattern" class="md-nav__link">
+    Given/when/then pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fewest-number-of-assertions-in-every-test" class="md-nav__link">
+    Fewest number of assertions in every test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assert-all-for-multiple-assertions" class="md-nav__link">
+    Assert all for multiple assertions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-disabling-failing-tests" class="md-nav__link">
+    No disabling failing tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-displayname" class="md-nav__link">
+    Using DisplayName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-randomness" class="md-nav__link">
+    Avoid randomness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-reading" class="md-nav__link">
+    Recommended reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-to-this-document" class="md-nav__link">
+    Updates to this document
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-styleguide/" class="md-nav__link">
+        React styleguide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../typescript-styleguide/" class="md-nav__link">
+        TypeScript styleguide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ide-formatting" class="md-nav__link">
+    IDE formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="IDE formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intellij" class="md-nav__link">
+    IntelliJ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eclipse" class="md-nav__link">
+    Eclipse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-violations" class="md-nav__link">
+    Checking for violations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-files" class="md-nav__link">
+    Source files
+  </a>
+  
+    <nav class="md-nav" aria-label="Source files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-american-english" class="md-nav__link">
+    Use American English
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-file-structure" class="md-nav__link">
+    Source file structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Source file structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-wildcard-imports" class="md-nav__link">
+    No wildcard imports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-line-wrapping-for-package-and-import-statements" class="md-nav__link">
+    No line-wrapping for package and import statements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-at-the-top" class="md-nav__link">
+    Fields at the top
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overloads-together" class="md-nav__link">
+    Overloads together
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newline-at-end-of-file" class="md-nav__link">
+    Newline at end of file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#braces" class="md-nav__link">
+    Braces
+  </a>
+  
+    <nav class="md-nav" aria-label="Braces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-true-brace-style-1tbs" class="md-nav__link">
+    One true brace style (1TBS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#100-character-column-limit" class="md-nav__link">
+    100 character column limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-statement-per-line" class="md-nav__link">
+    One statement per line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-blocks-can-be-concise" class="md-nav__link">
+    Empty blocks can be concise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whitespace" class="md-nav__link">
+    Whitespace
+  </a>
+  
+    <nav class="md-nav" aria-label="Whitespace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vertical-whitespace" class="md-nav__link">
+    Vertical whitespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-horizontal-alignment" class="md-nav__link">
+    No horizontal alignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-grouping-parentheses-recommended" class="md-nav__link">
+    Optional grouping parentheses: recommended
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-classes" class="md-nav__link">
+    Enum classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Enum classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comment-fall-through" class="md-nav__link">
+    Comment fall-through
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-all-cases-or-have-a-default-case" class="md-nav__link">
+    Enumerate all cases or have a default case
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+    <nav class="md-nav" aria-label="Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-you-need-the-comment" class="md-nav__link">
+    Do you need the comment?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeric-literals" class="md-nav__link">
+    Numeric literals
+  </a>
+  
+    <nav class="md-nav" aria-label="Numeric literals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#underscores-in-numeric-literals" class="md-nav__link">
+    Underscores in numeric literals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-suffixes" class="md-nav__link">
+    Long suffixes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-declarations" class="md-nav__link">
+    Variable declarations
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable declarations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-variable-declaration-per-line" class="md-nav__link">
+    One variable declaration per line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declare-as-close-as-possible-to-use" class="md-nav__link">
+    Declare as close as possible to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-c-style-array-declarations" class="md-nav__link">
+    No C-style array declarations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    Indentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Indentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-spaces-no-tabs" class="md-nav__link">
+    4 Spaces, no tabs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aligning-method-calls" class="md-nav__link">
+    Aligning method calls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming" class="md-nav__link">
+    Naming
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-names" class="md-nav__link">
+    Package names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-names" class="md-nav__link">
+    Class names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-names" class="md-nav__link">
+    Method names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constant-names" class="md-nav__link">
+    Constant names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-constant-field-names" class="md-nav__link">
+    Non-constant field names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-names" class="md-nav__link">
+    Parameter names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-variables-names" class="md-nav__link">
+    Local variables names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-variables-names" class="md-nav__link">
+    Type variables names
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javadoc" class="md-nav__link">
+    Javadoc
+  </a>
+  
+    <nav class="md-nav" aria-label="Javadoc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-author-tag" class="md-nav__link">
+    No @author tag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-practices" class="md-nav__link">
+    Programming practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotations_1" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-override" class="md-nav__link">
+    Use @Override
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-visiblefortesting" class="md-nav__link">
+    Use @VisibleForTesting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-swallow-exceptions" class="md-nav__link">
+    Don't swallow exceptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringbuilder-over-stringbuffer" class="md-nav__link">
+    StringBuilder over StringBuffer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-hashcode-and-equals" class="md-nav__link">
+    Overriding hashCode() and equals()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-tostring" class="md-nav__link">
+    Overriding toString()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-methods" class="md-nav__link">
+    Short methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todos" class="md-nav__link">
+    TODOs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefer-optional-over-null" class="md-nav__link">
+    Prefer Optional over null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favor-enummap-over-hashmap" class="md-nav__link">
+    Favor EnumMap over HashMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#junit-tests" class="md-nav__link">
+    JUnit tests
+  </a>
+  
+    <nav class="md-nav" aria-label="JUnit tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-assertj" class="md-nav__link">
+    Use AssertJ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#givenwhenthen-pattern" class="md-nav__link">
+    Given/when/then pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fewest-number-of-assertions-in-every-test" class="md-nav__link">
+    Fewest number of assertions in every test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assert-all-for-multiple-assertions" class="md-nav__link">
+    Assert all for multiple assertions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-disabling-failing-tests" class="md-nav__link">
+    No disabling failing tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-displayname" class="md-nav__link">
+    Using DisplayName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-randomness" class="md-nav__link">
+    Avoid randomness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-reading" class="md-nav__link">
+    Recommended reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-to-this-document" class="md-nav__link">
+    Updates to this document
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Project-Books/edit/master/docs/java-styleguide.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="java-style-guide">Java Style guide</h1>
+<p>By contributing to this repository, you are expected to follow this style guide. Please also ensure that you remain familiar with this document as it may change from time to time.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#introduction">Introduction</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#ide-formatting">IDE formatting</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#intellij">IntelliJ</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#eclipse">Eclipse</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#checking-for-violations">Checking for violations</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#source-files">Source files</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#use-american-english">American English</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#source-file-structure">Source file structure</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#no-wildcard-imports">No wildcard imports</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#no-line-wrapping-for-package-and-import-statements">No line-wrapping for package &amp; import statements</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#fields-at-the-top">Fields at the top</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#overloads-together">Overloads together</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#newline-at-end-of-file">Newline at end of file</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#formatting">Formatting</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#braces">Braces</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#one-true-brace-style-1TBS">One true brace style (1TBS)</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#100-character-column-limit">100 character column limit </a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#one-statement-per-line">One statement per line</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#empty-blocks-can-be-concise">Empty blocks can be concise</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#whitespace">Whitespace</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#vertical-whitespace">Vertical whitespace</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#no-horizontal-alignment">No horizontal alignment</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#optional-grouping-parentheses-recommended">Optional grouping parentheses: recommended</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#enum-classes">Enum classes</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#comment-fall-through">Comment fall-through</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#enumerate-all-cases-or-have-a-default-case">Enumerate all cases or have a default case</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#annotations">Annotations</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#comments">Comments</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#do-you-need-the-comment">Do you need the comment?</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#modifiers">Modifiers</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#numeric-literals">Numeric literals</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#underscores-in-numeric-literals">Underscores in numeric literals</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#long-suffixes">Long suffixes</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#variable-declarations">Variable declarations</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#one-variable-declaration-per-line">One variable declaration per line</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#declare-as-close-as-possible-to-use">Declare as close as possible to use</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#arrays">Arrays</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#no-c-style-array-declarations">No C-style array declarations</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#indentation">Indentation</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#4-spaces-no-tabs">4 Spaces, no tabs</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#aligning-method-calls">Aligning method calls</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#naming">Naming</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#package-names">Package names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#class-names">Class names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#method-names">Method names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#constant-names">Constant names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#non-constant-field-names">Non-constant field names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#parameter-names">Parameter names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#local-variables-names">Local variable names</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#type-variables-names">Type variable names</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#javadoc">Javadoc</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#no-author-tag">No @author tag</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#programming-practices">Programming practices</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#annotations-1">Annotations</a><ol>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#use-override">Use @Override</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#use-visiblefortesting">Use @VisibleForTesting</a></li>
+</ol>
+</li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#dont-swallow-exceptions">Don't swallow exceptions</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#stringbuilder-over-stringbuffer">StringBuilder over StringBuffer</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#overriding-hashcode-and-equals">Overriding hashCode() and equals()</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#overriding-tostring">Overriding toString()</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#short-methods">Short methods</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#todos">TODOs</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#prefer-optional-over-null">Prefer Optional over null</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#favor-enummap-over-hashmap">Favor EnumMap over HashMap</a></li>
+<li><a href="https://github.com/Project-Books/book-project/blob/master/STYLEGUIDE.md#junit-tests">JUnit tests</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#givenwhenthen-pattern">Given/when/then pattern</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#fewest-number-of-assertions-in-every-test">Fewest number of assertions in every test</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#assert-all-for-multiple-assertions">Assert all for multiple assertions</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#disabling-failing-tests">Disabling failing tests</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#using-displayname">Using DisplayName</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#avoid-randomness">Avoid randomness</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#recommended-reading">Recommended reading</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#updates-to-this-document">Updates to this document</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/STYLEGUIDE.md#acknowledgements">Acknowledgements</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>Good judgement should be followed. There may be times where it is more readable to not follow a particular guideline.
+Readable code is preferred over code that strictly follows this guide.</p>
+<p>A short summary explaining why the guideline is in place is included to help explain the rationale behind having it.</p>
+<h2 id="ide-formatting">IDE formatting</h2>
+<p>IDE-specific code style files have been exported and can be imported into your IDE. The files are located in the
+<a href="https://github.com/knjk04/book-project/tree/master/ide">ide</a> directory.</p>
+<h3 id="intellij">IntelliJ</h3>
+<p align="center">
+  <img src="../images/intellij_code_style.png" alt="Import IntelliJ code style file"/>
+</p>
+
+<p>For IntelliJ, you can use import the <a href="https://github.com/knjk04/book-project/blob/master/ide/intellij/book_project_code_style.xml">code style file</a>.
+Go to File &gt; Settings &gt; Editor &gt; Code Style &gt; Java in Linux or Windows. Click on the settings cog and choose
+Import Scheme &gt; IntelliJ IDEA code style XML.</p>
+<h3 id="eclipse">Eclipse</h3>
+<p align="center">
+  <img src="../images/eclipse_code_style.png" alt="Import Eclipse code style file"/>
+</p>
+
+<p>If you use Eclipse, you can import the formatter file by going to Window &gt; Preferences &gt; Java &gt; Code Style &gt; Formatter
+and selecting the import button to import the <a href="https://github.com/knjk04/book-project/blob/master/ide/eclipse/book_project_formatter_profile.xml">Eclipse code style file</a>.</p>
+<h2 id="checking-for-violations">Checking for violations</h2>
+<p>We're currently using Checkstyle to check for style guide violations. To o check for any violations, you can run the following command in the root directory of the project:</p>
+<pre><code>$ ./mvnw validate
+</code></pre>
+<p>By using the maven wrapper, you don't need to have Maven installed. Alternatively, you could run <code>mvn validate</code> if you do have Maven installed.</p>
+<h2 id="source-files">Source files</h2>
+<h3 id="use-american-english">Use American English</h3>
+<p>All code and comments should be written in English (United States).</p>
+<h3 id="source-file-structure">Source file structure</h3>
+<p>A source file should contain the following in order:</p>
+<ol>
+<li>License notice and copyright information</li>
+<li>Package statement</li>
+<li>Import statements</li>
+<li>Exactly one top-level class</li>
+</ol>
+<p>There should be exactly one blank line to separate every section.</p>
+<h4 id="no-wildcard-imports">No wildcard imports</h4>
+<p>Wildcard imports, regardless of whether they are static, should not be used:</p>
+<pre><code class="language-java">// good
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.ComponentEventListener;
+
+// bad
+import com.vaadin.flow.component.*;
+</code></pre>
+<h4 id="no-line-wrapping-for-package-and-import-statements">No line-wrapping for package and import statements</h4>
+<p>The package statement and import statements should not be line-wrapped.</p>
+<h3 id="fields-at-the-top">Fields at the top</h3>
+<p>All fields should appear at the top of the class before any constructors. Fields should not be interspersed between methods.</p>
+<h3 id="overloads-together">Overloads together</h3>
+<p>Overloaded methods, including constructors, should appear together with nothing in between.</p>
+<h3 id="newline-at-end-of-file">Newline at end of file</h3>
+<p>Every source file should have one newline at the end of the file.</p>
+<h2 id="formatting">Formatting</h2>
+<h3 id="braces">Braces</h3>
+<h4 id="one-true-brace-style-1tbs">One true brace style (1TBS)</h4>
+<p>We use the <a href="https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)">One true brace style (1TBS)</a>.</p>
+<pre><code class="language-java">// bad: braces should be used even where it is optional to do so in if, else if, while and do statements
+if (condition)
+    doSomething();
+
+// good
+if (condition) {
+    doSomething();
+} else {
+    doSomethingElse();
+}
+</code></pre>
+<h3 id="100-character-column-limit">100 character column limit</h3>
+<p>A line should generally not exceed 100 characters.</p>
+<p>Exceptions to this rule:
+- <code>package</code> and <code>import</code> statements
+- Long URL in Javadoc</p>
+<h3 id="one-statement-per-line">One statement per line</h3>
+<p>A line break should follow every statement. This includes variable declarations.</p>
+<h3 id="empty-blocks-can-be-concise">Empty blocks can be concise</h3>
+<p>Empty blocks can be concise providing they do not form a part of a multi-block statement.</p>
+<pre><code class="language-java">// fine
+void foo() {}
+
+// also fine
+void bar() {
+}
+
+// not fine
+if (condition) {
+  foo();
+} else { }
+</code></pre>
+<p>This applies to <code>if/else</code> and <code>try/catch/finally</code> blocks.</p>
+<h3 id="whitespace">Whitespace</h3>
+<h4 id="vertical-whitespace">Vertical whitespace</h4>
+<p><em>Where there should be one blank line</em></p>
+<ul>
+<li>
+<p>Between the end of one method (the closing brace) and the start of another</p>
+</li>
+<li>
+<p>Between groups of logical statements. This could be a group of related imports, fields, or statements within a method.</p>
+</li>
+</ul>
+<p>Generally speaking, there should not be more than one blank line.</p>
+<p><em>Where there should not be one blank line</em></p>
+<ul>
+<li>Between the class name and the first field declaration (or method declaration or definition)</li>
+</ul>
+<h4 id="no-horizontal-alignment">No horizontal alignment</h4>
+<pre><code class="language-java">// acceptable
+private int numberOfPages;
+private String authorFirstName;
+
+// unacceptable
+private int     numberOfPages;
+private String authorFirstName;
+</code></pre>
+<p>There should be no horizontal alignment. While it looks nice and improves readability, it can be harder to maintain.</p>
+<h3 id="optional-grouping-parentheses-recommended">Optional grouping parentheses: recommended</h3>
+<p>Optional grouping parentheses are recommended as they can improve readability. It can help when not everyone is clear with certain precedence rules.</p>
+<h3 id="enum-classes">Enum classes</h3>
+<p>If an enum class has no methods, it can be written as an array initialiser:</p>
+<pre><code class="language-java">private enum EventType { SAVED, DELETED }
+</code></pre>
+<h4 id="comment-fall-through">Comment fall-through</h4>
+<p>If a case continues onto the next statement group with a <code>break</code>, this should be commented. Something like  <code>// fall through</code> is sufficient. For example:</p>
+<pre><code class="language-java">switch (param) {
+   case 1:
+   case 2:
+      foo();
+      // fall through
+   case 3:
+      bar();
+      break;
+   default:
+      baz();
+}
+</code></pre>
+<p>The final statement in the switch block, the <code>default</code> case above, does not require a fall-through comment.</p>
+<h4 id="enumerate-all-cases-or-have-a-default-case">Enumerate all cases or have a default case</h4>
+<p>Either cover all of the cases or use the <code>default</code> case. Covering all cases is the preferred approach.</p>
+<h3 id="annotations">Annotations</h3>
+<p>Annotations should appear after any javadoc for the class, field or method.</p>
+<p>Each annotation should appear on its own line. For example:</p>
+<pre><code class="language-java">@Override
+@Nullable
+public Integer getPagesReadIfPresent() {
+   ...
+}
+</code></pre>
+<p>However, for fields, multiple annotations can be on the same line:</p>
+<pre><code class="language-java">@NotNull @VisibleForTesting String authorFirstName;
+</code></pre>
+<h3 id="comments">Comments</h3>
+<p>This section is to do with implementation comments, not Javadoc.</p>
+<p>Comments should not be decorated with asterisks or any other characters.</p>
+<h4 id="do-you-need-the-comment">Do you need the comment?</h4>
+<p>Only add comments where they add value. Comments should be used as a last resort. We prefer to make code readable by making the code trivial such that
+having a comment is redundant. Alternatively,  we prefer to extract code into a method with a descriptive method name such that the method name makes the comment redundant.</p>
+<h3 id="modifiers">Modifiers</h3>
+<p>Where applicable, class and member modifiers should appear in the following order, as recommended by the Java Language Specification:</p>
+<pre><code class="language-java">public protected private abstract default static final transient volatile synchronized native strictfp
+</code></pre>
+<h3 id="numeric-literals">Numeric literals</h3>
+<h4 id="underscores-in-numeric-literals">Underscores in numeric literals</h4>
+<p>For numeric literals that are ten thousand or higher, underscores are recommended to separate digits by thousands:</p>
+<pre><code class="language-java">// bad
+int booksSold = 10000;
+
+// good
+int booksSold = 10_000;
+</code></pre>
+<h4 id="long-suffixes">Long suffixes</h4>
+<p><code>long</code> variables should be suffixed with an uppercase <code>L</code>. The lowercase <code>l</code> should not be used as it may cause confusion with the digit <code>1</code>. For example, <code>1_000_000_000L</code> instead of <code>1_000_000_000l</code>.</p>
+<h3 id="variable-declarations">Variable declarations</h3>
+<h4 id="one-variable-declaration-per-line">One variable declaration per line</h4>
+<p>A variable declaration should appear on its own line. There should not be multiple declarations on one line:</p>
+<pre><code class="language-java">// good
+private String authorFirstName;
+private String authorLastName;
+
+// bad
+private String authorFirstName, authorLastName;
+</code></pre>
+<h4 id="declare-as-close-as-possible-to-use">Declare as close as possible to use</h4>
+<p>Local variables should be declared as close as reasonably possible to where it is used. This can help limit the scope and improve readability. Local variables should not be declared at the top of a method for the sake of it.</p>
+<h3 id="arrays">Arrays</h3>
+<h4 id="no-c-style-array-declarations">No C-style array declarations</h4>
+<p>The square brackets should be next to the type name, not the variable name. This is because they a part of the type.</p>
+<pre><code class="language-java">// good
+String[] args
+
+// bad
+String args[]
+</code></pre>
+<h3 id="indentation">Indentation</h3>
+<h4 id="4-spaces-no-tabs">4 Spaces, no tabs</h4>
+<p>Four spaces should be used for indentation. This is clearer than two spaces (more than four is extraneous).</p>
+<p>This also applies to CSS.</p>
+<h4 id="aligning-method-calls">Aligning method calls</h4>
+<p>An exception to the above four spaces indentation rule is aligning method calls (see below). This can improve readability.</p>
+<pre><code class="language-java">// good
+bookGrid.addColumn(AUTHOR_KEY)
+        .setSortable(true);
+
+// bad
+bookGrid.addColumn(AUTHOR_KEY)
+    .setSortable(true);
+</code></pre>
+<h2 id="naming">Naming</h2>
+<p>Special prefixes or suffixes, such as to represent member variables, are not used.  For example, the following are not permitted: <code>mTitle</code> and <code>_title</code>.</p>
+<h3 id="package-names">Package names</h3>
+<p>Package names are written in lowercase. Consecutive words are concatenated together without any underscores. For example, <code>com.example.readinggoal</code>, not <code>com.example.readingGoal</code> or <code>com.example.reading_goal</code>.</p>
+<p>To aid readability, try to keep package names short and one-word names wherever possible.</p>
+<h3 id="class-names">Class names</h3>
+<p>Class names are written in PascalCase (also referred to as UpperCamelCase).</p>
+<p>Class names should be nouns or noun phrases.</p>
+<p>Interface names can be nouns or noun phrases. However, in some cases, adjectives or adjective phrases are better (e.g. <code>Iterable</code>).</p>
+<p>Test classes should be the name of the class that it is testing followed by the suffix <code>Test</code>. For example. the test class for the <code>GenreStatistics</code> class should be called <code>GenreStatisticsTest</code>.</p>
+<h3 id="method-names">Method names</h3>
+<p>Method names are written in lowerCamelCase.</p>
+<p>Method names should usually be verb or verb phrases. For example, <code>processTransaction</code> or <code>findId</code>.</p>
+<p>Underscores are allowed in JUnit test methods to separate logical components. One popular pattern is <code>&lt;methodUnderTest&gt;_&lt;state&gt;</code>; for example, <code>pop_emptyStack</code>. The most important thing is that the test method name clearly summarises what is being tested.</p>
+<h3 id="constant-names">Constant names</h3>
+<p>Constants are written in CONSTANT_CASE. It is written in uppercase letters with each word separated by an underscore.</p>
+<h3 id="non-constant-field-names">Non-constant field names</h3>
+<p>Non-constant field names, regardless of whether they are static, are written in<code>lowerCamelCase</code>.</p>
+<p>The names tend to be noun or noun phrases.</p>
+<h3 id="parameter-names">Parameter names</h3>
+<p>Parameter names are written in <code>lowerCamelCase</code>.</p>
+<p>Single letter parameter names should be avoided in methods (common exception: for loops).</p>
+<h3 id="local-variables-names">Local variables names</h3>
+<p>Local variables names are written in <code>lowerCamelCase</code>.</p>
+<p>Even if they are immutable (e.g. marked as <code>final</code>), they are not considered constants, so they are not styled as constants.</p>
+<h3 id="type-variables-names">Type variables names</h3>
+<p>Type variables should be either:
+- One capital letter, which can be optionally succeeded by a letter (e.g. <code>T</code>, <code>E</code> or <code>T2</code>)
+- A class name followed by the capital letter <code>T</code> (e.g. <code>AuthorT</code>)</p>
+<h2 id="javadoc">Javadoc</h2>
+<h3 id="no-author-tag">No @author tag</h3>
+<p>Author tags can quickly become outdated as methods are updated or completely written by new authors. Git is far better
+at tracking changes.</p>
+<h2 id="programming-practices">Programming practices</h2>
+<h3 id="annotations_1">Annotations</h3>
+<h4 id="use-override">Use @Override</h4>
+<p>The @Override annotation should be used for overridden methods. This is so that the compiler can run
+a check at compile-time to see whether the method annotated with @Override actually overrides a method.</p>
+<h4 id="use-visiblefortesting">Use @VisibleForTesting</h4>
+<p>While it is usually better to limit members and methods, if it's required for testing, it will need to be made package-private. In such cases, they should be tagged as @VisibleForTesting to make it clear.</p>
+<h3 id="dont-swallow-exceptions">Don't swallow exceptions</h3>
+<p>Rarely should there be no response to a caught exception (e.g. you may want to log it).</p>
+<p>If it is right not to do anything, then this has to be justified in a comment.</p>
+<p>An exception to ignore exceptions is if the exception is expected in a test. For example, you may want to test whether the code under test does indeed throw an exception:</p>
+<pre><code class="language-java">try {
+   foo(-1);
+} catch (IndexOutOfBoundsException expected) {
+}
+</code></pre>
+<p>In such cases, the exception parameter should be called or include the word <code>expected</code>, as above.</p>
+<h3 id="stringbuilder-over-stringbuffer">StringBuilder over StringBuffer</h3>
+<p>StringBuilder should be used instead of a StringBuffer for single-threaded code.</p>
+<h3 id="overriding-hashcode-and-equals">Overriding hashCode() and equals()</h3>
+<p>If you override <code>hashCode()</code>, it is good practice to also override <code>equals()</code>.</p>
+<p>The overrides of <code>equals()</code> and <code>hashCode()</code> should be equivalent; if <code>x.equals(y)</code> is true, then <code>x.hashCode()</code> should have
+the same value as <code>y.hashCode()</code>.</p>
+<h3 id="overriding-tostring">Overriding toString()</h3>
+<p>It is sometimes worthwhile overriding <code>toString()</code> for logging purposes.</p>
+<pre><code class="language-java">// OK, but could be better. The hardcoded class name has to be changed if the class name changes
+@Override
+public String toString() {
+    return &quot;Book[title= &quot; + title
+        + &quot;, published = &quot; + published
+        + &quot;]&quot; ;
+}
+
+// Better
+@Override
+public String toString() {
+    return getClass.getName()
+        + &quot;[title= &quot; + title
+        + &quot;, published = &quot; + published
+        + &quot;]&quot; ;
+}
+</code></pre>
+<h3 id="short-methods">Short methods</h3>
+<p>Wherever possible, try to keep methods short (under 15 lines). This makes it easier to test, comprehend and reuse.</p>
+<h3 id="todos">TODOs</h3>
+<p>TODO comments are acceptable and encouraged if they are useful. However, we ask that if you create a TODO, please also create a new corresponding issue.</p>
+<h3 id="prefer-optional-over-null">Prefer Optional over null</h3>
+<p><code>Optional</code> provides useful semantics that something may be <code>null</code>. If you need to use <code>null</code>s, consider using <code>Optional</code>s instead.</p>
+<h3 id="favor-enummap-over-hashmap">Favor EnumMap over HashMap</h3>
+<p>For enums, favor <code>EnumMap</code> over <code>HashMap</code> for <a href="https://docs.oracle.com/javase/7/docs/api/java/util/EnumMap.html">performance reasons</a>.</p>
+<h2 id="junit-tests">JUnit tests</h2>
+<h3 id="use-assertj">Use AssertJ</h3>
+<p>For assertions and assumptions, we're using AssertJ. We find this to be more readable (it flows nicer as it reads like a sentence) and it's easier to have a consistent team style.</p>
+<h3 id="givenwhenthen-pattern">Given/when/then pattern</h3>
+<p>The pattern we follow for JUnit tests are given/when/then. For example, given some input some setup, when an action occurs, then assert as desired. Concrete example:</p>
+<pre><code class="language-java">    @Test
+    void errorShownWhenEmailInUse() {
+        // given
+        userRepository.save(VALID_TEST_USER);
+        EmailField emailField = _get(EmailField.class, spec -&gt; spec.withId(&quot;email&quot;));
+
+        // when
+        _setValue(emailField, VALID_TEST_USER.getEmail());
+
+        // then
+        assertThat(emailField.getErrorMessage()).isNotBlank();
+    }
+</code></pre>
+<p>In general, we add comments to separate out the given, when and then sections. We find that this greatly improves readability.</p>
+<h3 id="fewest-number-of-assertions-in-every-test">Fewest number of assertions in every test</h3>
+<p>In every test method, try to minimise the number of assertions. Ideally, there should only be one.</p>
+<h3 id="assert-all-for-multiple-assertions">Assert all for multiple assertions</h3>
+<p>If a test method needs multiple assertions, <code>assertSoftly()</code> should be used. Otherwise, lazy evaluation is used. For example, if you had two assertions, and both assertions fail, you will not know about the second assertion failing until you have fixed the first assertion.</p>
+<h3 id="no-disabling-failing-tests">No disabling failing tests</h3>
+<p>If a test fails, you are generally expected to fix it. We generally prefer for builds to fail rather than commenting out or disabling tests wtih the <code>@Disable</code> annotation.</p>
+<h3 id="using-displayname">Using DisplayName</h3>
+<p>All test classes should be annotated with a <code>@DisplayName</code>. For example, the test class <code>TagServiceTest</code> should
+be annotated with the display name <code>TagService should</code>. We find this greatly improves readability as the method
+names can be read like a sentence (e.g. <code>TagService should</code> <code>findAllTags()</code> or <code>deleteExistingTag()</code>).</p>
+<p>A <code>@DisplayName</code> annotation should be used at a method level where it adds value. For example, you could replace a Javadoc comment with a display name. This is also useful if the method name is concise but not comprehensive. Adding a display name should be used where it serves as useful documentation.</p>
+<h3 id="avoid-randomness">Avoid randomness</h3>
+<p>While it may seem better to use pseudorandom bounded values so that you can test more cases, it rarely improves coverage. It's better to use fixed input data with well-defined edge cases.</p>
+<h2 id="recommended-reading">Recommended reading</h2>
+<ul>
+<li>Clean code, Robert C. Martin</li>
+</ul>
+<h2 id="updates-to-this-document">Updates to this document</h2>
+<p>If you change any of the recommended styles in this guide, please note that the following may also need to be changed:</p>
+<ul>
+<li><a href="https://github.com/knjk04/book-project/blob/master/src/main/resources/checkstyle.xml">Checkstyle configuration</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/ide/intellij/book_project_code_style.xml">IntelliJ formatter</a></li>
+<li><a href="https://github.com/knjk04/book-project/blob/master/ide/eclipse/book_project_formatter_profile.xml">Eclipse formatter</a></li>
+</ul>
+<p>In addition, please update the table of contents.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This style guide has been adapted from <a href="https://google.github.io/styleguide/javaguide.html">Google's Java style guide</a> and
+<a href="https://github.com/twitter-archive/commons/blob/master/src/java/com/twitter/common/styleguide.md">Twitter's common style guide</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../code-of-conduct/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Code of conduct
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../react-styleguide/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              React styleguide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
